@@ -9,7 +9,9 @@ from aiogram.types import BotCommand
 
 from config import config
 from database import db
-from handlers import admin_router, errors_router, user_router
+from handlers.admin import router as admin_router
+from handlers.errors import router as errors_router
+from handlers.user import router as user_router
 from services import RateLimitMiddleware, run_broadcast_scheduler
 
 
